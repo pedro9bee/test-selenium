@@ -3,3 +3,4 @@ selenium
 pylint
 load_dotenv
 python-dotenv
+requests

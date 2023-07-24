@@ -9,3 +9,23 @@ To install run
 '''
 pip install -r requirements.txt
 '''
+
+### ALGORITM TO ASSOCIATE BOOKINGS
+
+- Access Login screen
+- Fill User
+- Fill password
+- press enter
+- sleep 5 minutes
+- Access Booking Association MFE
+- Read JSON FILE
+- Fill Form
+- Press Enter
+- Sleep 3 seconds
+- Access Booking Association MFE Again
+
+### AlGORITM TO DELETE ALL ASSOCIATION
+
+- Use oauth path to access token
+- read json 
+- call delete api

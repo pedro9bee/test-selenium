@@ -4,26 +4,40 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
 import time
 import os
+import json
 from dotenv import load_dotenv
+
+# f = open('test_data.json')
+# data = json.load(f)
 
 load_dotenv()  # take environment variables from .env.
 
-# connect to EDP
+# for i in data['bookingDetails']:
+#     bookingId = i["bookingId"]
+#     lastName = i["lastName"]
+#     departureDate = i["departureDate"]
+#     print("bookingId, " ", lastName, " ", departureDate")
+
+# Closing file
+# f.close()
+
+# Open URL
 driver = webdriver.Chrome(options=Options())
 driver.get("https://www.edp.pt")
 
-# ACCEPT COOKIES
+# FINDING ELEMENTS BY ID
 search_button = driver.find_element(
     By.ID, "onetrust-accept-btn-handler")
 
 search_button.click()
 
-# ACCEPT COOKIES
+# FINDING ELEMENTS BY X-PATH
 login_button = driver.find_element(
     By.XPATH, "//li[@class='mainNavigation__btnLogin']//button")
 
 login_button.click()
 
+# TIME SLEEP
 time.sleep(5)
 
 # ACCEPT COOKIES
